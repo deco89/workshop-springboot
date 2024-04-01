@@ -1,0 +1,13 @@
+package com.andrefonseca.Web.MS.entities;
+
+public class User {
+	
+	private Long id;
+	private String nameString;
+	private String email;
+	private String phone;
+	private String password;
+	
+	public User() {		
+	}
+}
