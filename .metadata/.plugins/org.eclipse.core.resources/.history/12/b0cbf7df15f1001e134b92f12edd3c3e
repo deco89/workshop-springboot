@@ -1,0 +1,5 @@
+package com.andrefonseca.Web.MS.services;
+
+public class UserService {
+
+}

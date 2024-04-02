@@ -1,0 +1,19 @@
+package com.andrefonseca.Web.MS.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.andrefonseca.Web.MS.entities.User;
+import com.andrefonseca.Web.MS.repositories.UserRepository;
+
+public class UserService {
+	
+	@Autowired
+	private UserRepository repository;
+	
+	public List<User> findAll() {
+		return repository.findAll();
+	}
+
+}
