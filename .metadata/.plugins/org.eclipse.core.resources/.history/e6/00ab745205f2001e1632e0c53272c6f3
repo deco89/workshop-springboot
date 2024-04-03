@@ -13,8 +13,6 @@ import com.andrefonseca.Web.MS.repositories.UserRepository;
 import com.andrefonseca.Web.MS.services.exceptions.DatabaseException;
 import com.andrefonseca.Web.MS.services.exceptions.ResourceNotFoundException;
 
-import jakarta.persistence.EntityNotFoundException;
-
 @Service
 public class UserService {
 	
@@ -49,8 +47,9 @@ public class UserService {
 		User entity = repository.getReferenceById(id);
 		updateData(entity, obj);
 		return repository.save(entity);
-		} catch (EntityNotFoundException e) {
-		} throw new ResourceNotFoundException(id);
+		} catch (RuntimeException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void updateData(User entity, User obj) {
