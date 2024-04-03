@@ -1,0 +1,15 @@
+package com.andrefonseca.Web.MS.entities;
+
+import com.andrefonseca.Web.MS.entities.pk.OrderItemPK;
+
+public class OrderItem {
+	
+	private OrderItemPK id;
+	
+	private Integer quantity;
+	private Double price;
+	
+	public OrderItem() {		
+	}
+
+}
