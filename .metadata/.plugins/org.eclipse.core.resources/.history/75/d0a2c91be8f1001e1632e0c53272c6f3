@@ -1,0 +1,16 @@
+package com.andrefonseca.Web.MS.entities;
+
+import java.time.Instant;
+
+public class Payment {
+	
+	private Long id;
+	private Instant moment;
+	
+	private Order order;
+	
+	public Payment() {
+		
+	}
+
+}
